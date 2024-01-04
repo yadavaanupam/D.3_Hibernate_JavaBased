@@ -11,11 +11,11 @@ public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Employee vikas=new Employee();
-		// vikas.setId(1);
-		vikas.setName("Piyush");
-		vikas.setGender("Male");
-		vikas.setSalary(35000);
+		Employee Anupam=new Employee();
+		// Anupam.setId(1);
+		Anupam.setName("Piyush");
+		Anupam.setGender("Male");
+		Anupam.setSalary(35000);
 		
 		SessionFactory sf =HibernateConfig.getSessionFactory();
 		Session session= sf.openSession();
@@ -26,7 +26,7 @@ public class App {
 		 Employee e = session.get(Employee.class,2);
 		System.out.println(e);
 		
-		session.save(vikas);
+		session.save(Anupam);
 		tx.commit();
 
 	}
